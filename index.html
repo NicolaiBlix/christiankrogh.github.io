@@ -8,7 +8,6 @@
   <link rel="icon" href="/favicon_CK.png">
 
   <style>
-    /* Base */
     body {
       margin: 0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -18,7 +17,6 @@
       background: #f6f6f6;
     }
 
-    /* Header */
     header {
       position: sticky;
       top: 0;
@@ -29,19 +27,17 @@
       z-index: 10;
     }
 
-    /* Page wrap */
     .wrap {
       max-width: 1000px;
       margin: 0 auto;
       padding: 32px 20px 80px;
     }
 
-    /* Top image */
+    /* Top image (over alt) */
     .top-image {
       margin-bottom: 40px;
       max-width: 58%;
     }
-
     .top-image img {
       width: 100%;
       height: auto;
@@ -50,7 +46,6 @@
       background: #f2f2f2;
     }
 
-    /* Layout */
     .hero {
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
@@ -58,24 +53,27 @@
       align-items: start;
     }
 
-    /* Typography */
     h1 {
       font-size: 18px;
       font-weight: 500;
       margin: 0 0 14px 0;
     }
 
-    p {
-      margin: 0 0 18px 0;
-    }
+    p { margin: 0 0 18px 0; }
 
-    /* Work image */
+    /* Work images */
     .work-image img {
       width: 100%;
       height: auto;
       display: block;
       border-radius: 12px;
       background: #f2f2f2;
+    }
+
+    /* Dette er den du prøver på: flytter verk-2 litt opp */
+    .work-top {
+      margin-top: -12px;   /* juster -6 / -20 etter smak */
+      margin-bottom: 12px; /* litt luft ned til neste bilde */
     }
 
     .caption {
@@ -86,36 +84,24 @@
       line-height: 1.4;
     }
 
-    /* Mobile */
     @media (max-width: 800px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
-
-      .top-image {
-        max-width: 100%;
-        .work-top {
-        margin-top: -12px;
-        }
-      }
+      .hero { grid-template-columns: 1fr; }
+      .top-image { max-width: 100%; }
+      .work-top { margin-top: 0; } /* ikke dra opp på mobil */
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  Christian Krogh
-</header>
+<header>Christian Krogh</header>
 
 <main class="wrap">
 
-  <!-- TOP IMAGE -->
   <div class="top-image">
     <img src="assets/top.png" alt="Installasjon" />
   </div>
 
-  <!-- CONTENT -->
   <section class="hero">
 
     <div>
@@ -141,16 +127,17 @@
 
     <div class="work-image">
 
-  <div class="work-top">
-    <img src="assets/verk-2.png" alt="Detalj av verket" />
-  </div>
+      <div class="work-top">
+        <img src="assets/verk-2.png" alt="Detalj av verket" />
+      </div>
 
-  <div class="caption">
-    <strong>Sand i maskineriet, 2025</strong><br>
-    Sinkbøtte, kattesand, hjulvisp, <em>Aktuell Rapport</em> (1985), polymer
-  </div>
-</div>
+      <!-- hovedbildet (ta det bort hvis du ikke vil ha det) -->
+      <img src="assets/verk-1.jpg" alt="Sand i maskineriet" />
 
+      <div class="caption">
+        <strong>Sand i maskineriet, 2025</strong><br>
+        Sinkbøtte, kattesand, hjulvisp, <em>Aktuell Rapport</em> (1985), polymer
+      </div>
 
     </div>
 
@@ -159,4 +146,3 @@
 
 </body>
 </html>
-
