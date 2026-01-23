@@ -4,93 +4,116 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Christian Krogh</title>
+
   <link rel="icon" href="/favicon_CK.png">
 
   <style>
-    body{
-      margin:0;
+    body {
+      margin: 0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      font-size:16px;
-      line-height:1.6;
-      color:#111;
-      background:#f6f6f6;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #111;
+      background: #f6f6f6;
     }
 
-    header{
-      position:sticky;
-      top:0;
-      background:#fff;
-      padding:18px 20px;
-      border-bottom:1px solid #eee;
-      font-weight:600;
-      z-index:10;
+    header {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      padding: 18px 20px;
+      border-bottom: 1px solid #eee;
+      font-weight: 600;
+      z-index: 10;
     }
 
-    .wrap{
-      max-width:1000px;
-      margin:0 auto;
-      padding:32px 20px 80px;
+    .wrap {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 32px 20px 80px;
     }
 
     /* Top image */
-    .top-image{
-      margin-bottom:40px;
-      max-width:58%;
-    }
-    .top-image img{
-      width:100%;
-      height:auto;
-      display:block;
-      border-radius:14px;
-      background:#f2f2f2;
+    .top-image {
+      max-width: 58%;
+      margin-bottom: 40px;
     }
 
-    /* Layout */
-    .hero{
-      display:grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap:40px;
-      align-items:start;
+    .top-image img {
+      width: 100%;
+      display: block;
+      border-radius: 14px;
+      background: #f2f2f2;
     }
 
-    h1{
-      font-size:18px;
-      font-weight:500;
-      margin:0 0 14px 0;
+    /* Two-column layout */
+    .content {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
     }
 
-    p{ margin:0 0 18px 0; }
-
-    /* Work column */
-    .work-image img{
-      width:100%;
-      height:auto;
-      display:block;
-      border-radius:12px;
-      background:#f2f2f2;
+    .text {
+      flex: 1.2;
     }
 
-    /* Flytt verk-2 opp: juster tallet */
-    .work-top img{
-      transform: translateY(-40px);
+    .work {
+      flex: 0.8;
+      position: relative;
+      padding-top: 80px; /* PLASS TIL BØTTEBILDET */
     }
 
-    /* Så caption ikke følger med opp */
-    .caption{
-      margin-top: 0;
-      padding-top: 12px;
-      font-size:14px;
-      color:#555;
-      font-style:italic;
-      line-height:1.4;
+    h1 {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 0 0 14px 0;
+    }
+
+    p {
+      margin: 0 0 18px 0;
+    }
+
+    /* BUCKET IMAGE – JUSTER KUN DETTE TALLET */
+    .bucket {
+      position: absolute;
+      top: -20px; /* ← ENDRE DETTE TALLET */
+      left: 0;
+      width: 100%;
+    }
+
+    .bucket img {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+      background: #f2f2f2;
+    }
+
+    .caption {
+      margin-top: 16px;
+      font-size: 14px;
+      color: #555;
+      font-style: italic;
+      line-height: 1.4;
     }
 
     /* Mobile */
-    @media (max-width:800px){
-      .hero{ grid-template-columns: 1fr; }
-      .top-image{ max-width:100%; }
-      .work-top img{ transform:none; }
-      .caption{ padding-top: 12px; }
+    @media (max-width: 800px) {
+      .content {
+        flex-direction: column;
+      }
+
+      .top-image {
+        max-width: 100%;
+      }
+
+      .work {
+        padding-top: 0;
+      }
+
+      .bucket {
+        position: static;
+        margin-bottom: 16px;
+      }
     }
   </style>
 </head>
@@ -101,13 +124,15 @@
 
 <main class="wrap">
 
+  <!-- TOP IMAGE -->
   <div class="top-image">
     <img src="assets/top.png" alt="Installasjon" />
   </div>
 
-  <section class="hero">
+  <!-- CONTENT -->
+  <div class="content">
 
-    <div>
+    <div class="text">
       <h1>Kunstnerisk praksis</h1>
 
       <p>
@@ -126,21 +151,4 @@
         Arbeidene undersøker hvordan hjelpemidler, symboler og strukturer kan miste sin
         hensikt og i stedet skape motstand – både på et personlig og samfunnsmessig nivå.
       </p>
-    </div>
 
-    <div class="work-image">
-      <div class="work-top">
-        <img src="assets/verk-2.png" alt="Detalj av verket" />
-      </div>
-
-      <div class="caption">
-        <strong>Sand i maskineriet, 2025</strong><br>
-        Sinkbøtte, kattesand, hjulvisp, <em>Aktuell Rapport</em> (1985), polymer
-      </div>
-    </div>
-
-  </section>
-</main>
-
-</body>
-</html>
