@@ -1,41 +1,130 @@
 <!doctype html>
 <html lang="no">
 <head>
-  <link rel="icon" href="/favicon_CK.png">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Christian Krogh</title>
+
+  <link rel="icon" href="/favicon_CK.png">
+
   <style>
-    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; }
-    header { position: sticky; top: 0; background: white; padding: 18px 20px; border-bottom: 1px solid #eee; }
-    .wrap { max-width: 1000px; margin: 0 auto; padding: 24px 20px; }
-    .hero { display: grid; gap: 20px; grid-template-columns: 1.2fr 0.8fr; }
-    img { width: 100%; height: auto; display: block; background: #f2f2f2; border-radius: 12px; }
-    @media (max-width: 800px) { .hero { grid-template-columns: 1fr; } }
+    /* Base */
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #111;
+      background: #fff;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      padding: 18px 20px;
+      border-bottom: 1px solid #eee;
+      font-weight: 600;
+      z-index: 10;
+    }
+
+    /* Layout */
+    .wrap {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 32px 20px 80px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Typography */
+    h1 {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 0 0 14px 0;
+    }
+
+    p {
+      margin: 0 0 18px 0;
+    }
+
+    /* Image */
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      background: #f2f2f2;
+    }
+
+    .caption {
+      margin-top: 12px;
+      font-size: 14px;
+      color: #555;
+      font-style: italic;
+      line-height: 1.4;
+    }
   </style>
 </head>
+
 <body>
-  <header><b>Christian Krogh</b></header>
+
+  <header>
+    Christian Krogh
+  </header>
 
   <main class="wrap">
     <section class="hero">
+
+      <!-- Text -->
       <div>
-        <h1>Objekt / installasjon</h1>
-        <p>Christian Krogh (f. 1960) bor og arbeider i Oslo. Hans bakgrunn spenner fra økonomi og innovasjonsforskning til mangeårig arbeid innen rus- og psykiatrifeltet. Parallelt med akademisk virksomhet og undervisning har han arbeidet tett på institusjoner og mennesker i sårbare livssituasjoner.
+        <h1>Kunstnerisk praksis</h1>
 
-Denne kombinasjonen av systemtenkning, sosial erfaring og observasjon av hverdagslivets friksjoner danner et viktig bakteppe for hans kunstneriske arbeid. Krogh arbeider hovedsakelig med objekter og installasjoner, der funksjonelle gjenstander settes sammen på måter som forskyver mening, nytte og forventning.
+        <p>
+          Christian Krogh (f. 1960) bor og arbeider i Oslo. Hans bakgrunn spenner fra
+          økonomi og innovasjonsforskning til mangeårig arbeid innen rus- og
+          psykiatrifeltet. Parallelt med akademisk virksomhet og undervisning har han
+          arbeidet tett på institusjoner og mennesker i sårbare livssituasjoner.
+        </p>
 
-Arbeidene undersøker hvordan hjelpemidler, symboler og strukturer kan miste sin hensikt og i stedet skape motstand – både på et personlig og samfunnsmessig nivå.</p>
-      </div>
+        <p>
+          Denne kombinasjonen av systemtenkning, sosial erfaring og observasjon av
+          hverdagslivets friksjoner danner et viktig bakteppe for hans kunstneriske arbeid.
+          Krogh arbeider hovedsakelig med objekter og installasjoner, der funksjonelle
+          gjenstander settes sammen på måter som forskyver mening, nytte og forventning.
+        </p>
 
-      <div>
-        <img src="assets/verk-1.jpg" alt="Verk 1" />
-        <p style="margin:10px 0 0; font-size:14px; color:#444;">
-          Sand i maskineriet, 2025
-          Sinkbøtte, kattesand, hjulvisp, Aktuell Rapport (1985), polymer
+        <p>
+          Arbeidene undersøker hvordan hjelpemidler, symboler og strukturer kan miste sin
+          hensikt og i stedet skape motstand – både på et personlig og samfunnsmessig nivå.
         </p>
       </div>
+
+      <!-- Image -->
+      <div>
+        <img src="assets/verk-1.jpg" alt="Sand i maskineriet" />
+
+        <div class="caption">
+          <em>Sand i maskineriet</em>, 2025<br>
+          Sinkbøtte, kattesand, hjulvisp, <em>Aktuell Rapport</em> (1985), polymer
+        </div>
+      </div>
+
     </section>
   </main>
+
 </body>
 </html>
+
