@@ -8,7 +8,6 @@
   <link rel="icon" href="/favicon_CK.png">
 
   <style>
-    /* Base */
     body {
       margin: 0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -18,7 +17,6 @@
       background: #fff;
     }
 
-    /* Header */
     header {
       position: sticky;
       top: 0;
@@ -29,11 +27,22 @@
       z-index: 10;
     }
 
-    /* Layout */
     .wrap {
       max-width: 1000px;
       margin: 0 auto;
       padding: 32px 20px 80px;
+    }
+
+    .top-image {
+      margin-bottom: 40px;
+    }
+
+    .top-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 14px;
+      background: #f2f2f2;
     }
 
     .hero {
@@ -49,7 +58,6 @@
       }
     }
 
-    /* Typography */
     h1 {
       font-size: 18px;
       font-weight: 500;
@@ -60,8 +68,7 @@
       margin: 0 0 18px 0;
     }
 
-    /* Image */
-    img {
+    .work-image img {
       width: 100%;
       height: auto;
       display: block;
@@ -81,50 +88,52 @@
 
 <body>
 
-  <header>
-    Christian Krogh
-  </header>
+<header>
+  Christian Krogh
+</header>
 
-  <main class="wrap">
-    <section class="hero">
+<main class="wrap">
 
-      <!-- Text -->
-      <div>
-        <h1>Kunstnerisk praksis</h1>
+  <!-- TOP IMAGE -->
+  <div class="top-image">
+    <img src="assets:top.png" alt="Installasjon" />
+  </div>
 
-        <p>
-          Christian Krogh (f. 1960) bor og arbeider i Oslo. Hans bakgrunn spenner fra
-          økonomi og innovasjonsforskning til mangeårig arbeid innen rus- og
-          psykiatrifeltet. Parallelt med akademisk virksomhet og undervisning har han
-          arbeidet tett på institusjoner og mennesker i sårbare livssituasjoner.
-        </p>
+  <!-- CONTENT -->
+  <section class="hero">
 
-        <p>
-          Denne kombinasjonen av systemtenkning, sosial erfaring og observasjon av
-          hverdagslivets friksjoner danner et viktig bakteppe for hans kunstneriske arbeid.
-          Krogh arbeider hovedsakelig med objekter og installasjoner, der funksjonelle
-          gjenstander settes sammen på måter som forskyver mening, nytte og forventning.
-        </p>
+    <div>
+      <h1>Kunstnerisk praksis</h1>
 
-        <p>
-          Arbeidene undersøker hvordan hjelpemidler, symboler og strukturer kan miste sin
-          hensikt og i stedet skape motstand – både på et personlig og samfunnsmessig nivå.
-        </p>
+      <p>
+        Christian Krogh (f. 1960) bor og arbeider i Oslo. Hans bakgrunn spenner fra
+        økonomi og innovasjonsforskning til mangeårig arbeid innen rus- og
+        psykiatrifeltet.
+      </p>
+
+      <p>
+        Denne kombinasjonen av systemtenkning, sosial erfaring og observasjon av
+        hverdagslivets friksjoner danner et viktig bakteppe for hans kunstneriske arbeid.
+        Krogh arbeider hovedsakelig med objekter og installasjoner.
+      </p>
+
+      <p>
+        Arbeidene undersøker hvordan hjelpemidler, symboler og strukturer kan miste sin
+        hensikt og i stedet skape motstand – både på et personlig og samfunnsmessig nivå.
+      </p>
+    </div>
+
+    <div class="work-image">
+      <img src="assets/verk-1.jpg" alt="Sand i maskineriet" />
+
+      <div class="caption">
+        <em>Sand i maskineriet</em>, 2025<br>
+        Sinkbøtte, kattesand, hjulvisp, <em>Aktuell Rapport</em> (1985), polymer
       </div>
+    </div>
 
-      <!-- Image -->
-      <div>
-        <img src="assets/verk-1.jpg" alt="Sand i maskineriet" />
-
-        <div class="caption">
-          <em>Sand i maskineriet</em>, 2025<br>
-          Sinkbøtte, kattesand, hjulvisp, <em>Aktuell Rapport</em> (1985), polymer
-        </div>
-      </div>
-
-    </section>
-  </main>
+  </section>
+</main>
 
 </body>
 </html>
-
